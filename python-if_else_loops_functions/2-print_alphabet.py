@@ -1,7 +1,4 @@
 #!/usr/bin/python3
 
-def print_alphabet():
-    for i in range(97, 123):
-        print(chr(i), end="")
-
-print_alphabet()
+for char_code in range(ord('a'), ord('z') + 1):
+    print("{:c}".format(char_code), end='')
