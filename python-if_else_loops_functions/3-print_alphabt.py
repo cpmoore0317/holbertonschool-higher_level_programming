@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 
 for char_code in range(ord('a'), ord('z') + 1):
-    print("{:c}".format(char_code), end='')
+    if chr(char_code) not in ['q', 'e']:
+        print("{:c}".format(char_code), end='')
