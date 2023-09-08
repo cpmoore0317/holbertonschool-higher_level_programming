@@ -1,17 +1,13 @@
 #!/usr/bin/python3
 
-from calculator_1 import add, sub, mul, div
+if __name__ == "__main__":
 
-a = 10
-b = 5
+    from calculator_1 import add, sub, mul, div
 
-operations = [
-    ("+", add),
-    ("-", sub),
-    ("*", mul),
-    ("/", div)
-]
+    a = 10
+    b = 5
 
-for op_symbol, operation in operations:
-    result = operation(a, b)
-    print(f"{a} {op_symbol} {b} = {result}")
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
