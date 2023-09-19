@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-# 2-square.py
-# Parker Moore
 """ Defines a square based on 1-square.py. """
 
 
-class Sqaure:
+class Square:
     """ Defining an empty class named Square. """
 
     def __init__(self, size=0):
