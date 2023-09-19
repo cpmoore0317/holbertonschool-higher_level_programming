@@ -3,47 +3,40 @@
 Task 5
 """
 
-def print_square(size):
+
+def text_indentation(text):
     """
-    Print a square of a specified size with the character #.
+    Print a text with 2 new lines after each '.', '?', and ':' characters.
 
     Args:
-        size (int): The size of the square.
+        text (str): The input text to be processed.
 
     Raises:
-        TypeError: If size is not an integer.
-        ValueError: If size is less than 0.
+        TypeError: If the input 'text' is not a string.
 
-    Example:
-        >>> print_square(4)
-        ####
-        ####
-        ####
-        ####
-        >>> print_square(10)
-        ##########
-        ##########
-        ##########
-        ##########
-        ##########
-        ##########
-        ##########
-        ##########
-        ##########
-        ##########
-        >>> print_square(0)
-        >>> print_square(1)
-        #
-        >>> print_square(-1)
-        Traceback (most recent call last):
-            ...
-        ValueError: size must be >= 0
     """
-    if not isinstance(size, int) or (isinstance(size, float) and size < 0):
-        raise TypeError("size must be an integer")
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
 
-    if size < 0:
-        raise ValueError("size must be >= 0")
+    result = ""
+    in_whitespace = False
 
-    for _ in range(size):
-        print("#" * size)
+    for char in text:
+        if char in ['.', '?', ':']:
+            result += char + '\n\n'
+            in_whitespace = True
+        else:
+            if char.isspace():
+                if in_whitespace:
+                    continue
+                else:
+                    result += ' '
+                    in_whitespace = True
+            else:
+                result += char
+                in_whitespace = False
+
+    lines = result.split('\n')
+    for line in lines:
+        if line.strip():
+            print(line)
