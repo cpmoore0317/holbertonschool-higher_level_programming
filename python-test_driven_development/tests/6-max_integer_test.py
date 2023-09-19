@@ -1,23 +1,33 @@
+#!/usr/bin/python3
+"""Unittest for max_integer([..])
+"""
 import unittest
-from max_integer import max_integer
+max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
-    def test_max_integer(self):
-        # Test when the list contains positive integers
+    def test_empty_list(self):
+        self.assertEqual(max_integer([]), None)
+
+    def test_positive_integers(self):
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertEqual(max_integer([1, 3, 4, 2]), 4)
-        self.assertEqual(max_integer([4]), 4)
 
-        # Test when the list contains negative integers
+    def test_negative_integers(self):
         self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
         self.assertEqual(max_integer([-1, -3, -4, -2]), -1)
 
-        # Test when the list contains a mix of positive and negative integers
+    def test_mixed_integers(self):
         self.assertEqual(max_integer([-1, 2, -3, 4]), 4)
-        self.assertEqual(max_integer([1, -3, 0, 2]), 2)
+        self.assertEqual(max_integer([-1, -3, 0, 2]), 2)
 
-        # Test when the list is empty
-        self.assertIsNone(max_integer([]))
+    def test_single_element_list(self):
+        self.assertEqual(max_integer([7]), 7)
+
+    def test_duplicate_values(self):
+        self.assertEqual(max_integer([5, 5, 5, 5]), 5)
+
+    def test_large_list(self):
+        self.assertEqual(max_integer(list(range(1, 10001))), 10000)
 
 if __name__ == '__main__':
     unittest.main()
