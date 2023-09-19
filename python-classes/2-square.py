@@ -2,7 +2,12 @@
 """ Defines a square. """
 
 class Sqaure:
-    """ Defining class Square. """
+    """
+    Defining class Square.
+
+    Args:
+        size : size of square
+    """
 
     def __init__(self, size=0):
         if type(size) is not int:
