@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Task 3
+"""
+
+
 def say_my_name(first_name, last_name=""):
     """
     Print a message with the first name and last name.
@@ -29,12 +34,3 @@ def say_my_name(first_name, last_name=""):
         print(f"My name is {first_name} {last_name}")
     else:
         print(f"My name is {first_name}")
-
-if __name__ == '__main__':
-    say_my_name("John", "Smith")
-    say_my_name("Walter", "White")
-    say_my_name("Bob")
-    try:
-        say_my_name(12, "White")
-    except Exception as e:
-        print(e)
