@@ -4,4 +4,7 @@
 class Square:
     """This represents a square."""
     __size = None
-    self.__size = size
+
+    def __init__(self, size):
+        """Initializes the square"""
+        self.__size = size
