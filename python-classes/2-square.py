@@ -1,17 +1,11 @@
 #!/usr/bin/python3
 """ Defines a square. """
-
 class Sqaure:
-    """
-    Defining class Square.
-
-    Args:
-        size : size of square
-    """
+    """ Defining class Square """
     def __init__(self, size=0):
-        if type(size) is not int:
+        """ Initialization of square """
+        self.__size = size
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
-         if size < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
