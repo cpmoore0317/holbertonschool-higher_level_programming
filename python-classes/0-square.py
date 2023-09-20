@@ -3,5 +3,5 @@
 
 
 class Square:
-    """ This class represents a square and provides methods for square operations. """
+    """ This class represents a square. """
     pass
