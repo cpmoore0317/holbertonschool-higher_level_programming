@@ -21,7 +21,7 @@ class Square(Rectangle):
             TypeError: If size is not an integer.
             ValueError: If size is less than or equal to 0.
         """
-        super().__init__(size, size)  # Call the parent class's constructor with the same size for both width and height
+        super().__init__(size, size)
 
     def __str__(self):
         """
@@ -30,8 +30,5 @@ class Square(Rectangle):
         Returns:
             str: A string in the format "[Square] <size>/<size>".
         """
-        return "[Square] {}/{}".format(self._Rectangle__width, self._Rectangle__height)  # Access private attributes of the base class
-
-    # The area() method is inherited from Rectangle, so there's no need to override it here
-
-    # You don't need to define integer_validator here as it's inherited from Rectangle
+        return ("[Square] {}/{}"
+            .format(self._Rectangle__width, self._Rectangle__height))
