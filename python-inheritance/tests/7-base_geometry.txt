@@ -1,0 +1,46 @@
+===========================
+DocTest for 7-base_geometry
+===========================
+
+-----importing function and class------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> base_geometry = BaseGeometry()
+<class '7-base_geometry.BaseGeometry'>
+
+-----Testing-----
+
+---Regular---
+
+Calling area():
+>>> base_geometry.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+valid arguement to integer_validator:
+>>> base_geometry.integer_validator("valid number", 1)
+
+---Incorrect Inputs---
+
+Insufficent Arguments:
+>>> base_geometry.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value' argument, got 2
+
+>>> base_geometry.integer_validator("name")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Value is not an int:
+>>> base_geometry.integer_validator("Wrong", "input")
+Traceback (most recent call last):
+TypeError: invalid number must be an integer
+
+Value is less than or equal to Zero:
+>>> base_geometry.integer_validator("Not", -8)
+Traceback (most recent call last):
+ValueError: invalid must be greater than 0
+
+>>> base_geometry.integer_validator("Not", 0)
+Traceback (most recent call last):
+ValueError: invalid must be greater than 0
