@@ -7,7 +7,8 @@ returns the number of characters added
 
 def append_write(filename="", text=""):
     """
-    Append the given text to the end of a text file (UTF-8) and return the number of characters added.
+    Append the given text to the end of a text file (UTF-8) and
+    return the number of characters added.
 
     If the file doesn’t exist, it will be created.
 
@@ -20,11 +21,14 @@ def append_write(filename="", text=""):
             file.write(text)
             return len(text)
     except Exception as e:
-        # Handle any exceptions that might occur (e.g., permission errors, disk full)
+        # Handle any exceptions that might occur
+        # (e.g., permission errors, disk full)
         print(f"An error occurred: {e}")
-        return 0  # Return 0 to indicate no characters were added due to the error
+        return 0  # Return 0 to indicate no characters
+        # were added due to the error
 
 # Example usage:
-if __name__ == "__main__":
-    nb_characters_added = append_write("file_append.txt", "This School is so cool!\n")
+if __name__ == "__main__":  
+    nb_characters_added = append_write("file_append.txt", 
+                                       "This School is so cool!\n")
     print(nb_characters_added)
