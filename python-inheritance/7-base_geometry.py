@@ -14,7 +14,8 @@ class BaseGeometry:
         Calculate the area.
 
         Raises:
-            Exception: Always raises an Exception with the message "area() is not implemented."
+            Exception: Always raises an Exception with the message
+            "area() is not implemented."
         """
         raise Exception("area() is not implemented")
 
