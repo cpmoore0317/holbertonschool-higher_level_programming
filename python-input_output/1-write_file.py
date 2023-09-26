@@ -17,12 +17,16 @@ def write_file(filename="", text=""):
         int: The number of characters written to the file.
 
     Notes:
-        This function opens the specified file in write mode ('w') and writes the provided text to it.
-        If the file already exists, it will be overwritten. If the file does not exist, it will be created.
-        The function returns the number of characters successfully written to the file.
+        This function opens the specified file in write mode
+        ('w') and writes the provided text to it.
+        If the file already exists, it will be overwritten.
+        If the file does not exist, it will be created.
+        The function returns the number of characters
+        successfully written to the file.
 
     Example:
-        >>> nb_characters = write_file("my_first_file.txt", "This School is so cool!\n")
+        >>> nb_characters = write_file("my_first_file.txt",
+        "This School is so cool!\n")
         >>> print(nb_characters)
         24
     """
@@ -33,6 +37,7 @@ def write_file(filename="", text=""):
     except Exception:
         return 0
 
+
 if __name__ == "__main__":
-    nb_characters = write_file("my_first_file.txt", "This School is so cool!\n")
+    nb_characters = write_file("my_first_file.txt", "This School is so cool!")
     print(nb_characters)
