@@ -2,6 +2,7 @@
 """
 Func for num 2
 """
+
 def is_same_class(obj, a_class):
     """
     Checks if an object is exactly an instance of the specified class.
