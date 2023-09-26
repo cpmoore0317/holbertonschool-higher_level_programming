@@ -2,6 +2,8 @@
 """
 Class for num 6
 """
+
+
 class BaseGeometry:
     """
     A base geometry class.

@@ -2,6 +2,7 @@
 """
 Class for num 8
 """
+
 class Rectangle(BaseGeometry):
     """
     A class representing a rectangle, inheriting from BaseGeometry.

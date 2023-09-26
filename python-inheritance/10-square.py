@@ -2,6 +2,8 @@
 """
 Class for num 10
 """
+
+
 class Square(Rectangle):
     """
     A class representing a square, inheriting from Rectangle.
