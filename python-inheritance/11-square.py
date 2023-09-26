@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-Square for 11
+Class Square that inherits from Rectangle
 """
+
+
 class Square(Rectangle):
     """
     A class representing a square, which is a special case of a rectangle.
