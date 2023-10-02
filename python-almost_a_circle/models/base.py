@@ -26,7 +26,7 @@ class Base:
             id (int, optional): An optional integer to set as the unique identifier.
             If not provided, a unique identifier will be automatically generated.
         """
-        if id in not None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
