@@ -3,6 +3,7 @@
 Module for the Base class.
 """
 
+
 class Base:
     """
     The `Base` class serves as the foundation for all other classes in
@@ -23,8 +24,10 @@ class Base:
         Initialize a new instance of the `Base` class.
 
         Args:
-            id (int, optional): An optional integer to set as the unique identifier.
-            If not provided, a unique identifier will be automatically generated.
+            id (int, optional): An optional integer to set as the
+            unique identifier.
+            If not provided, a unique identifier will be
+            automatically generated.
         """
         if id is not None:
             self.id = id
