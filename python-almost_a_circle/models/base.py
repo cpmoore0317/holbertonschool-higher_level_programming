@@ -103,3 +103,22 @@ class Base:
             dummy = cls(1)  # Create a dummy Square instance
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Load a list of instances from a JSON file.
+
+        Returns:
+            list: A list of instances loaded from the file. If the file
+            doesn't exist, an empty list is returned.
+        """
+        file_name = cls.__name__ + ".json"
+        try:
+            with open(file_name, 'r') as file:
+                json_str = file.read()
+                json_list = cls.from_json_string(json_str)
+                instances = [cls.create(**item) for item in json_list]
+                return instances
+        except FileNotFoundError:
+            return []
