@@ -68,3 +68,18 @@ class Base:
                 lst.append(obj.to_dictionary())
         with open(cls.__name__ + ".json", 'w') as f:
             f.write(Base.to_json_string(lst))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Convert a JSON string to a list of dictionaries.
+
+        Args:
+            json_string (str): A JSON string representation.
+
+        Returns:
+            list: A list of dictionaries represented by the JSON string.
+        """
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
