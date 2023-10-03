@@ -4,6 +4,7 @@ Module for the Base class.
 """
 import json
 
+
 class Base:
     """
     The `Base` class serves as the foundation for all other classes in
