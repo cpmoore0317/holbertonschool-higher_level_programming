@@ -2,7 +2,7 @@
 """
 Module for the Base class.
 """
-
+import json
 
 class Base:
     """
