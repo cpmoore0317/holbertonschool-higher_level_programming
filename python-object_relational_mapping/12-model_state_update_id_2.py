@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Change the name of a State object in the database hbtn_0e_6_usa."""
+
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import create_engine
