@@ -3,7 +3,7 @@
 // Define the Rectangle class
 class Rectangle {
   // Constructor for creating a Rectangle instance
-  constructor(w, h) {
+  constructor (w, h) {
     // Check if both width and height are greater than 0
     if (w > 0 && h > 0) {
       // If conditions are met, set the width and height
