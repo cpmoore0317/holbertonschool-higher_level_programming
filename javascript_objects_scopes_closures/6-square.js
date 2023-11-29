@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 // Import the Rectangle class from the './4-rectangle' module
-const Rectangle = require('./4-rectangle');
+const Rectangle = require('./5-square');
 
 // Define and export a new class Square that extends the Rectangle class
 module.exports = class Square extends Rectangle {
@@ -17,7 +17,9 @@ module.exports = class Square extends Rectangle {
     super.double();
   }
 
+  // Define a method charPrint within the Square class
   charPrint (c = 'X') {
+    // Call the print method of the base class (Rectangle) with the provided character 'c'
     super.print(c);
   }
 };
