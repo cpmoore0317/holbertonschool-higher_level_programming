@@ -1,18 +1,19 @@
 #!/usr/bin/node
 
+// Define the Rectangle class
 class Rectangle {
-  constructor (w, h) {
-    // Constructor takes two arguments: w (width) and h (height).
-    // Check if w or h is not a positive integer or is equal to 0.
-    if (w <= 0 && h <= 0) {
-      // If the conditions are met, create an empty object.
-      return this;
-    } else {
-      // Otherwise, initialize the instance attributes width and height with the provided values.
+  // Constructor for creating a Rectangle instance
+  constructor(w, h) {
+    // Check if both width and height are greater than 0
+    if (w > 0 && h > 0) {
+      // If conditions are met, set the width and height
       this.width = w;
       this.height = h;
+    } else {
+      // If conditions are not met, create an invalid Rectangle
     }
   }
 }
 
+// Export the Rectangle class for use in other modules
 module.exports = Rectangle;
